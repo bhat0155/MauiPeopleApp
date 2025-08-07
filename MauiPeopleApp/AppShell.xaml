@@ -5,7 +5,7 @@
        x:Class="MauiPeopleApp.AppShell"
        Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent Title="Login" ContentTemplate="{DataTemplate views:MainPage}" Route="MainPage" />
+    <ShellContent Title="Login" ContentTemplate="{DataTemplate views:MainPage}" Route="MainPage" /> 
     <ShellContent Title="People" ContentTemplate="{DataTemplate views:PersonListPage}" Route="PersonListPage" />
 
 </Shell>
