@@ -7,15 +7,17 @@ public class PersonService
 {
     private readonly HttpClient _httpClient;
 
+
     public PersonService()
     {
-        _httpClient = new Http();
+        _httpClient = new HttpClient();
+        _httpClient.DefaultRequestHeaders.Add("x-api-key", "reqres-free-v1");
     }
 
     public async Task<List<Person>> GetPeopleAsync()
     {
         // get your api key from https://reqres.in/signup
-        var response = await _httpClient.GetFromJsonAsync<ApiResponse>("https://reqres.in/api/users?api_key=[YOUR_API_KEY]");
+        var response = await _httpClient.GetFromJsonAsync<ApiResponse>("https://reqres.in/api/users?api_key=reqres-free-v1");
         return response?.Data ?? new List<Person>();
     }
 
